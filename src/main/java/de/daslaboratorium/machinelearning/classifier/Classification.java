@@ -1,6 +1,7 @@
 package de.daslaboratorium.machinelearning.classifier;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Collection;
 
 /**
@@ -34,7 +35,7 @@ public class Classification<T, K> implements Serializable {
     /**
      * The probability that the featureset belongs to the given category.
      */
-    private float probability;
+    private BigDecimal probability;
 
     /**
      * Constructs a new Classification with the parameters given and a default
@@ -46,7 +47,7 @@ public class Classification<T, K> implements Serializable {
      *            The category.
      */
     public Classification(Collection<T> featureset, K category) {
-        this(featureset, category, 1.0f);
+        this(featureset, category, new BigDecimal(1.0f));
     }
 
     /**
@@ -59,7 +60,7 @@ public class Classification<T, K> implements Serializable {
      * @param probability
      *            The probability.
      */
-    public Classification(Collection<T> featureset, K category, float probability) {
+    public Classification(Collection<T> featureset, K category, BigDecimal probability) {
         this.featureset = featureset;
         this.category = category;
         this.probability = probability;
@@ -79,7 +80,7 @@ public class Classification<T, K> implements Serializable {
      * 
      * @return
      */
-    public float getProbability() {
+    public BigDecimal getProbability() {
         return this.probability;
     }
 

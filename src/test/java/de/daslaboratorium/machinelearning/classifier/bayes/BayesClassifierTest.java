@@ -3,6 +3,7 @@ package de.daslaboratorium.machinelearning.classifier.bayes;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -64,10 +65,10 @@ public class BayesClassifierTest {
         List<Classification<String, String>> list = new ArrayList<Classification<String, String>>(classifications);
 
         Assert.assertEquals(CATEGORY_NEGATIVE, list.get(0).getCategory());
-        Assert.assertEquals(0.0078125, list.get(0).getProbability(), EPSILON);
+        Assert.assertEquals("0.007812500000", list.get(0).getProbability().toString());
 
         Assert.assertEquals(CATEGORY_POSITIVE, list.get(1).getCategory());
-        Assert.assertEquals(0.0234375, list.get(1).getProbability(), EPSILON);
+        Assert.assertEquals("0.023437500000", list.get(1).getProbability().toString());
     }
 
     @Test

@@ -1,5 +1,7 @@
 package de.daslaboratorium.machinelearning.classifier;
 
+import java.math.BigDecimal;
+
 /**
  * Simple interface defining the method to calculate the feature probability.
  *
@@ -22,6 +24,6 @@ public interface IFeatureProbability<T, K> {
      *            the category to check the feature against
      * @return the probability <code>p(feature|category)</code>
      */
-    public float featureProbability(T feature, K category);
+    public BigDecimal featureProbability(T feature, K category);
 
 }
