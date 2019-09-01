@@ -11,22 +11,14 @@ Maven Quick-Start
 
 This Java Naive Bayes Classifier can be installed via the jitpack repository. Make sure to add it to your buildfile first.
 
-```xml
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
-```
-
+first mvn install then use
 Then, treat it as any other dependency.
 
 ```xml
 <dependency>
   <groupId>com.github.ptnplanet</groupId>
   <artifactId>Java-Naive-Bayes-Classifier</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.9</version>
 </dependency>
 ```
 
